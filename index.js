@@ -35,7 +35,7 @@ getQuestions();
 
 //這是讀取問題的函式
 function getQuestions() {
-  var sheets = google.sheets('v4');
+  var { google } = require("googleapis")
   sheets.spreadsheets.values.get({
      auth: oauth2Client,
      spreadsheetId: mySheetId,
