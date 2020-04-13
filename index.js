@@ -113,15 +113,15 @@ bot.on('message', function(event) {
 
 //這是發送訊息給user的函式
 function sendMessage(eve,msg){
-   if (event.message.text === '表單'){
-   eve.reply(msg).then(function(data) {
-      // success 
-      return true;
-   }
-   }).catch(function(error) {
-      // error 
-      return false;
-   });
+	if (event.message.text === '表單'){
+	   eve.reply(msg).then(function(data) {
+		  // success 
+		  return true;
+	   }).catch(function(error) {
+		  // error 
+		  return false;
+	   });
+	}
 }
 
 
