@@ -117,7 +117,8 @@ function sendMessage(eve,msg){
    eve.reply(msg).then(function(data) {
       // success 
       return true;
-   }}).catch(function(error) {
+   }
+   }).catch(function(error) {
       // error 
       return false;
    });
