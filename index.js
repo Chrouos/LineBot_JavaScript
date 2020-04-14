@@ -80,6 +80,7 @@ function appendMyRow(userId) {
 }
 
 function googleSheetsapi(){
+   bot.on('message', function(event) {
    if (event.message.type === 'text') {
       var myId=event.source.userId;
 	  var msg = event.message.text;
@@ -107,13 +108,14 @@ function googleSheetsapi(){
          users[myId].replies[0]=new Date();
          appendMyRow(myId);
       }
-   }	
+   }
+});
 }
 
 
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
-   googleSheetsapi();;
+   googleSheetsapi()
 });
 
 
