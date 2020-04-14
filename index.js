@@ -79,8 +79,7 @@ function appendMyRow(userId) {
    });
 }
 
-function googleSheetsapi(){
-   bot.on('message', function(event) {
+function googleSheetsapi(function(event)){
 	   if (event.message.type === 'text') {
 		  var myId=event.source.userId;
 		  var msg = event.message.text;
@@ -109,7 +108,6 @@ function googleSheetsapi(){
 			 appendMyRow(myId);
 		  }
 	   }
-	});
 }
 
 
