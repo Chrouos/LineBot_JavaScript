@@ -81,7 +81,7 @@ function appendMyRow(userId) {
 
 function googleSheetsapi(){
 	bot.on('message', function(event) {
-		if (event.message.type === 'text') {
+		//if (event.message.type === 'text') {
 		var myId=event.source.userId;
 		var msg = event.message.text;
 		if (users[myId]==undefined){
@@ -103,14 +103,14 @@ function googleSheetsapi(){
 		myStep++;
 		
 		users[myId].step=myStep;
-			if(myStep == 2 ) return;
+			console.log(myStep);
 			if (myStep>=totalSteps){
 			myStep=-1;
 			users[myId].step=myStep;
 			users[myId].replies[0]=new Date();
 			appendMyRow(myId);
 			}
-		}
+		//}
 	});
 }
 
