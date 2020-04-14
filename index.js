@@ -90,6 +90,7 @@ function googleSheetsapi(){
 			users[myId].step=-1;
 			users[myId].replies=[];
 			}
+		if(myStep == 2 ) return;
 		var myStep=users[myId].step;
 		if (myStep===-1)
 			sendMessage(event,myQuestions[0][0]);
@@ -100,8 +101,7 @@ function googleSheetsapi(){
 			sendMessage(event,myQuestions[1][myStep]+'\n'+myQuestions[0][myStep+1]);
 			users[myId].replies[myStep+1]=event.message.text;
 			}
-		myStep++;
-		if(myStep == 2 ) return;
+		myStep++;	
 		users[myId].step=myStep;
 			if (myStep>=totalSteps){
 			myStep=-1;
