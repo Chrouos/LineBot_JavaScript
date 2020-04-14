@@ -80,7 +80,7 @@ function appendMyRow(userId) {
 }
 
 function googleSheetsapi(){
-	for(int i=0; i<3; i++){
+	while(myStep == 3){
 	   bot.on('message', function(event) {
 		   if (event.message.type === 'text') {
 			  var myId=event.source.userId;
