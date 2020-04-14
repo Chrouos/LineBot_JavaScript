@@ -101,7 +101,7 @@ function googleSheetsapi(){
 			users[myId].replies[myStep+1]=event.message.text;
 			}
 		myStep++;
-		while(myStep == 2 ) return;
+		if(myStep == 2 ) return;
 		users[myId].step=myStep;
 			if (myStep>=totalSteps){
 			myStep=-1;
