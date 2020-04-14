@@ -109,7 +109,7 @@ function googleSheetsapi(){
 			appendMyRow(myId);
 			}
 		}
-		while(myStep ==3) return;
+		while(myStep == 2 ) return;
 	});
 }
 
