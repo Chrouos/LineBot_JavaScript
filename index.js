@@ -81,8 +81,9 @@ function appendMyRow(userId) {
 
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
-   if (event.message.Text === '表單') { 
+   if (event.message.Text === '表單') {
       var myId=event.source.userId;
+	  var msg = event.message.text;
       if (users[myId]==undefined){
          users[myId]=[];
          users[myId].userId=myId;
@@ -113,13 +114,13 @@ bot.on('message', function(event) {
 
 //這是發送訊息給user的函式
 function sendMessage(eve,msg){
-	eve.reply(msg).then(function(data) {
-	// success 
-	return true;
-	}).catch(function(error) {
-	// error 
-	return false;
-	});
+   eve.reply(msg).then(function(data) {
+      // success 
+      return true;
+   }).catch(function(error) {
+      // error 
+      return false;
+   });
 }
 
 
