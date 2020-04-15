@@ -134,8 +134,26 @@ bot.on('message', function(event) {
 		  // 傳送訊息失敗時，可在此寫程式碼 
 		  console.log('錯誤產生，錯誤碼：'+error);
 		});
-
-	}
+	}//文化資工
+	
+	else if(event.message.text == '招生網頁'){
+		var msg = '這是招生網頁';
+		event.reply(msg).then(function(data) {
+		console.log(msg);
+		}).catch(function(error) {
+		console.log('錯誤產生，錯誤碼：'+error);
+		});
+	}//招生網頁
+	
+	else if(event.message.text == '校園地圖'){
+		var msg = '這是校園地圖';
+		event.reply(msg).then(function(data) {
+		console.log(msg);
+		}).catch(function(error) {
+		console.log('錯誤產生，錯誤碼：'+error);
+		});
+	}//校園地圖
+	
 });
 
 
