@@ -105,14 +105,12 @@ function googleSheetsapi(event){
 			
 			console.log(myStep);
 						
-			if(myStep == 2) {return true;}
 			if (myStep>=totalSteps){
 			myStep=-1;
 			users[myId].step=myStep;
 			users[myId].replies[0]=new Date();
 			appendMyRow(myId);	
 				}	
-			
 		}
 }
 
@@ -130,7 +128,7 @@ function welcome_start(event){
 bot.on('message', function(event) {
 	
 	if(event.message.text == '表單'){
-	googleSheetsapi(event)
+		googleSheetsapi(event)
 	}
 	
 	if(event.message.text == '文化資工'){
