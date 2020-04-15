@@ -110,7 +110,7 @@ function googleSheetsapi(event){
 
 //歡迎詞
 function welcome_start(event){
-	var welcome = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n這裡有關許多你不懂的也有許多你懂的（？） \n不過歡迎隨時呼叫我唷，不然我會長灰塵！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：「文化資工」「招生網頁」「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會替你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「機器人出來」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
+	var welcome = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n這裡有關許多你不懂的也有許多你懂的（？） \n不過歡迎隨時呼叫我唷，不然我會長灰塵！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：「文化資工」「招生網頁」「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會替你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「工具人出來」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
 	event.reply(welcome).then(function(data) {
 		console.log(welcome);
 	}).catch(function(error) {
@@ -166,7 +166,7 @@ bot.on('message', function(event) {
 		});
 	}//校園地圖
 	
-	if(event.message.text == '機器人出來'){
+	if(event.message.text == '工具人出來'){
 		welcome_start(event);
 	}
 	
