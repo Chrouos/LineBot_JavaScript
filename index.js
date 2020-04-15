@@ -120,9 +120,9 @@ function welcome_start(event){
 
 //謝語
 function thank_tail(event){
-	var welcome = "我是尾巴" ;
-	event.reply(welcome).then(function(data) {
-		console.log(welcome);
+	var tail = "我是尾巴" ;
+	event.reply(tail).then(function(data) {
+		console.log(tail);
 	}).catch(function(error) {
 		console.log('錯誤產生，錯誤碼：'+error);
 	});
@@ -150,7 +150,7 @@ bot.on('message', function(event) {
 		var msg = '這就是文化資工';
 	  //收到文字訊息時，直接把收到的訊息傳回去
 		event.reply(msg).then(function(data) {
-		thank_tail(event);
+			thank_tail(event);
 		  // 傳送訊息成功時，可在此寫程式碼 
 		  console.log(msg);
 		}).catch(function(error) {
