@@ -154,7 +154,7 @@ bot.on('message', function(event) {
 	}//校園地圖
 	
 	if(event.message.text == '呼叫'){
-		welcome();
+		welcomes();
 	}
 	
 	
