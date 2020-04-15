@@ -152,7 +152,7 @@ bot.on('message', function(event) {
 	}//校園地圖
 	
 	if(event.message.text == '呼叫'){
-		var welcome = '歡迎來到文化資工招生聊天機器人(開心) + "<br>" + 這是下一行' ;
+		var welcome = '歡迎來到文化資工招生聊天機器人(開心) ' + ' 這是下一行' ;
 			event.reply(welcome).then(function(data) {
 			console.log(welcome);
 		}).catch(function(error) {
