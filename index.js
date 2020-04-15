@@ -83,12 +83,7 @@ function appendMyRow(userId) {
 function googleSheetsapi(event){
 		if (event.message.type === 'text') {
 			var myId=event.source.userId;
-			if (users[myId]==undefined){
-				users[myId]=[];
-				users[myId].userId=myId;
-				users[myId].step=-1;
-				users[myId].replies=[];
-				}	
+			
 			var myStep=users[myId].step;
 			if (myStep===-1)
 				sendMessage(event,myQuestions[0][0]);
@@ -127,8 +122,13 @@ function welcome_start(event){
 bot.on('message', function(event) {
 	
 	var myId=event.source.userId;
-	var myStep = users[myId].step;
-	if( myStep >= 1){
+	if (users[myId]==undefined){
+		users[myId]=[];
+		users[myId].userId=myId;
+		users[myId].step=-1;
+		users[myId].replies=[];
+	}	
+	if( users[myId].step >= 1){
 		googleSheetsapi(event)
 	}
 	if(event.message.text == '表單'){
