@@ -78,7 +78,7 @@ function appendMyRow(userId) {
       }
    });
 }
-
+//
 function googleSheetsapi(){
 	bot.on('message', function(event) {
 		if (event.message.type === 'text') {
