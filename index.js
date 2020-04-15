@@ -158,7 +158,7 @@ bot.on('message', function(event) {
 	}//招生網頁
 	
 	if(event.message.text == '校園地圖'){
-		var msg = '好心的機器人告訴大家，文化很小，也很好迷路～\n機器人友情提示：迷路的只有學長姐\n\n所以特地準備了地圖，歡迎大家點進看看校園\n\n\n所以特地準備了地圖，歡迎大家點進看看校園\n https://www.pccu.edu.tw/intro_traffic.html \n\n也準備了校園平面圖呢！\n https://www.pccu.edu.tw/intro_campus_map.html';
+		var msg = '好心的機器人告訴大家，文化很小，也很好迷路～\n機器人友情提示：迷路的只有學長姐……\n\n所以特地準備了地圖，歡迎大家點進看看校園長什麼樣子～\n\n\n所以特地準備了地圖，歡迎大家點進看看校園\n https://www.pccu.edu.tw/intro_traffic.html \n\n也準備了校園平面圖呢！\n https://www.pccu.edu.tw/intro_campus_map.html';
 		event.reply(msg).then(function(data) {
 		console.log(msg);
 		}).catch(function(error) {
