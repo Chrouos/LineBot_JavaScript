@@ -128,7 +128,7 @@ bot.on('message', function(event) {
 		users[myId].step=-1;
 		users[myId].replies=[];
 	}	
-	if( users[myId].step >= 1){
+	if( users[myId].step >= 0){
 		googleSheetsapi(event)
 	}
 	if(event.message.text == '表單'){
