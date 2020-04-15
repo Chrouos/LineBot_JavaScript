@@ -110,7 +110,7 @@ function googleSheetsapi(event){
 
 //歡迎詞
 function welcome_start(event){
-	var welcome = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n這裡有關許多你不懂的也有許多你懂的（？） \n不過歡迎隨時呼叫我唷，不然我會長灰塵！ \n啊我沒有實體… \n\n可以這樣呼叫我：文化資工、招生網頁、校園地圖\n 並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會替你們回答哦！ \n\n\n偷偷告訴你們，想我的時候或忘記的時候，喊「呼叫」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
+	var welcome = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n這裡有關許多你不懂的也有許多你懂的（？） \n不過歡迎隨時呼叫我唷，不然我會長灰塵！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：「文化資工」「招生網頁」「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會替你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「呼叫」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
 	event.reply(welcome).then(function(data) {
 		console.log(welcome);
 	}).catch(function(error) {
@@ -147,7 +147,7 @@ bot.on('message', function(event) {
 	
 	
 	if(event.message.text == '文化資工'){
-		var msg = '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n" + 'https://university.1111.com.tw/univ_depinfo5.aspx?sno=100123&mno=520114' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工專人為你回答唷。';
+		var msg = '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n" + 'https://university.1111.com.tw/univ_depinfo5.aspx?sno=100123&mno=520114' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工具專人為你回答唷。';
 	  //收到文字訊息時，直接把收到的訊息傳回去
 		event.reply(msg).then(function(data) {
 		  // 傳送訊息成功時，可在此寫程式碼 
@@ -159,7 +159,7 @@ bot.on('message', function(event) {
 	}//文化資工
 	
 	else if(event.message.text == '招生網頁'){
-		var msg = '這裡是文化資工的招生網頁\n內容有：課程大綱、師資陣容、系作介紹等等…\nhttps://iecs.pccu.edu.tw/files/11-1130-5770.php';
+		var msg = '你呼叫招生網頁我聽到了！！\n由於我不太專業，只好請到了專業的學校網站出來(́◉◞౪◟◉‵) \n以下的內容有：課程大綱、師資陣容、系作介紹等等…\nhttps://iecs.pccu.edu.tw/files/11-1130-5770.php';
 		event.reply(msg).then(function(data) {
 		console.log(msg);
 		}).catch(function(error) {
