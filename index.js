@@ -161,8 +161,8 @@ bot.on('message', function(event) {
 	
 	if(event.message.text == '呼叫'){
 		var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + "<br>" +  '這是下一行' ;
-			event.reply(msg).then(function(data) {
-			console.log(msg);
+			event.reply(welcome).then(function(data) {
+			console.log(welcome);
 		}).catch(function(error) {
 			console.log('錯誤產生，錯誤碼：'+error);
 		});
