@@ -94,14 +94,13 @@ function googleSheetsapi(){
 		if (myStep===-1)
 			sendMessage(event,myQuestions[0][0]);
 		else{
-		if (myStep==(totalSteps-1))
-			sendMessage(event,myQuestions[1][myStep]);
-		else
-			sendMessage(event,myQuestions[1][myStep]+'\n'+myQuestions[0][myStep+1]);
+			if (myStep==(totalSteps-1))
+				sendMessage(event,myQuestions[1][myStep]);
+			else
+				sendMessage(event,myQuestions[1][myStep]+'\n'+myQuestions[0][myStep+1]);
 			users[myId].replies[myStep+1]=event.message.text;
-			}
+		}
 		myStep++;
-		
 		users[myId].step=myStep;
 			console.log(myStep);
 			if (myStep>=totalSteps){
@@ -111,7 +110,7 @@ function googleSheetsapi(){
 			appendMyRow(myId);	
 			return false;
 			}
-		//}
+		}
 	});
 }
 
@@ -120,8 +119,7 @@ function googleSheetsapi(){
 bot.on('message', function(event) {
 	if (event.message.text === '表單'){
 		googleSheetsapi()
-	}
-
+   }
 });
 
 
