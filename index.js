@@ -116,7 +116,7 @@ function googleSheetsapi(event){
 		}
 }
 
-function welcomes(bot){
+function welcomes(){
 	var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + "<br>" +  '這是下一行' ;
 	event.reply(msg).then(function(data) {
 		console.log(msg);
@@ -160,7 +160,12 @@ bot.on('message', function(event) {
 	}//校園地圖
 	
 	if(event.message.text == '呼叫'){
-		welcomes();
+		var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + "<br>" +  '這是下一行' ;
+			event.reply(msg).then(function(data) {
+			console.log(msg);
+		}).catch(function(error) {
+			console.log('錯誤產生，錯誤碼：'+error);
+		});
 	}
 	
 	
