@@ -79,8 +79,7 @@ function appendMyRow(userId) {
    });
 }
 //
-function googleSheetsapi(){
-	bot.on('message', function(event) {
+function googleSheetsapi(event){
 		if (event.message.type === 'text') {
 			var myId=event.source.userId;
 			var msg = event.message.text;
@@ -114,14 +113,14 @@ function googleSheetsapi(){
 				}	
 			
 		}
-	});
+	);
 }
 
 
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
 	if (event.message.text === '表單'){
-		googleSheetsapi()
+		googleSheetsapi(event)
    }
    
    /*
