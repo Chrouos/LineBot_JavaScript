@@ -104,15 +104,15 @@ function googleSheetsapi(){
 			users[myId].step=myStep;
 			
 			console.log(myStep);
-			console.log(totalSteps);
-			
-			//if(myStep == 2) return false;
+						
+			if(myStep == 2) return ture;
 			if (myStep>=totalSteps){
 			myStep=-1;
 			users[myId].step=myStep;
 			users[myId].replies[0]=new Date();
 			appendMyRow(myId);	
 				}	
+			
 		}
 	});
 }
