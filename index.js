@@ -102,13 +102,16 @@ function googleSheetsapi(){
 			}
 			myStep++;
 			users[myId].step=myStep;
-				console.log(myStep);
-				//if(myStep == 2) return false;
-				if (myStep>=totalSteps){
-				myStep=-1;
-				users[myId].step=myStep;
-				users[myId].replies[0]=new Date();
-				appendMyRow(myId);	
+			
+			console.log(myStep);
+			console.log(totalSteps);
+			
+			//if(myStep == 2) return false;
+			if (myStep>=totalSteps){
+			myStep=-1;
+			users[myId].step=myStep;
+			users[myId].replies[0]=new Date();
+			appendMyRow(myId);	
 				}	
 		}
 	});
@@ -118,9 +121,7 @@ function googleSheetsapi(){
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
 	if (event.message.text === '表單'){
-		for(int i=0; i<3; i++){
 		googleSheetsapi()
-		}
    }
    
    /*
@@ -136,6 +137,8 @@ bot.on('message', function(event) {
 		});
    }
    */
+   
+
    
 });
 
