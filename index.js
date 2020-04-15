@@ -116,14 +116,6 @@ function googleSheetsapi(event){
 		}
 }
 
-function welcomes(){
-	var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + \n +  '這是下一行' ;
-	event.reply(msg).then(function(data) {
-		console.log(msg);
-	}).catch(function(error) {
-		console.log('錯誤產生，錯誤碼：'+error);
-	});
-}
 
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
@@ -160,7 +152,7 @@ bot.on('message', function(event) {
 	}//校園地圖
 	
 	if(event.message.text == '呼叫'){
-		var welcome = '歡迎來到文化資工招生聊天機器人(開心) 這是下一行' ;
+		var welcome = '歡迎來到文化資工招生聊天機器人(開心)' <br> +' 這是下一行' ;
 			event.reply(welcome).then(function(data) {
 			console.log(welcome);
 		}).catch(function(error) {
