@@ -118,6 +118,16 @@ function welcome_start(event){
 	});
 }	
 
+//謝語
+function thank_tail(event){
+	var welcome = "歡迎來到文化資工招生聊天機器人(開心) "+ "\n" + "這是下一行" ;
+	event.reply(welcome).then(function(data) {
+		console.log(welcome);
+	}).catch(function(error) {
+		console.log('錯誤產生，錯誤碼：'+error);
+	});
+}
+
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
 	
@@ -146,6 +156,7 @@ bot.on('message', function(event) {
 		  // 傳送訊息失敗時，可在此寫程式碼 
 		  console.log('錯誤產生，錯誤碼：'+error);
 		});
+		thank_tail(event);
 	}//文化資工
 	
 	else if(event.message.text == '招生網頁'){
