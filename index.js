@@ -147,7 +147,7 @@ bot.on('message', function(event) {
 	
 	
 	if(event.message.text == '文化資工'){
-		var msg = '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n" + 'http://facemood.grtimed.com/index.php?view=member&mod=user&mid=5186' + "\n\n\n" + '當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工專人為你回答唷。';
+		var msg = '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n" + 'http://facemood.grtimed.com/index.php?view=member&mod=user&mid=5186' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工專人為你回答唷。';
 	  //收到文字訊息時，直接把收到的訊息傳回去
 		event.reply(msg).then(function(data) {
 		  // 傳送訊息成功時，可在此寫程式碼 
