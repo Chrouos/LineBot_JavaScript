@@ -127,7 +127,7 @@ function welcome_start(event){
 bot.on('message', function(event) {
 	
 	var myId=event.source.userId;
-	var myStep = users[myId].step
+	var myStep = users[myId].step;
 	if( myStep >= 1){
 		googleSheetsapi(event)
 	}
