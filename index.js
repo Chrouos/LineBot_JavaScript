@@ -120,7 +120,7 @@ function welcome_start(event){
 
 //謝語
 function thank_tail(event){
-	var welcome = "歡迎來到文化資工招生聊天機器人(開心) "+ "\n" + "這是下一行" ;
+	var welcome = "我是尾巴" ;
 	event.reply(welcome).then(function(data) {
 		console.log(welcome);
 	}).catch(function(error) {
@@ -150,13 +150,13 @@ bot.on('message', function(event) {
 		var msg = '這就是文化資工';
 	  //收到文字訊息時，直接把收到的訊息傳回去
 		event.reply(msg).then(function(data) {
+		thank_tail(event);
 		  // 傳送訊息成功時，可在此寫程式碼 
 		  console.log(msg);
 		}).catch(function(error) {
 		  // 傳送訊息失敗時，可在此寫程式碼 
 		  console.log('錯誤產生，錯誤碼：'+error);
 		});
-		thank_tail(event);
 	}//文化資工
 	
 	else if(event.message.text == '招生網頁'){
