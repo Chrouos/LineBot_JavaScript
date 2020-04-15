@@ -116,7 +116,7 @@ function googleSheetsapi(event){
 		}
 }
 
-function welcomes(){
+function welcomes(event){
 	var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + "<br>" +  '這是下一行' ;
 	event.reply(msg).then(function(data) {
 		console.log(msg);
