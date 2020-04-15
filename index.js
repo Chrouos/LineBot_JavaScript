@@ -116,7 +116,7 @@ function googleSheetsapi(event){
 		}
 }
 
-function welcomes(bot.on('message', function(event)){
+function welcomes(function(event)){
 	var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + "<br>" +  '這是下一行' ;
 	event.reply(msg).then(function(data) {
 		console.log(msg);
@@ -124,6 +124,7 @@ function welcomes(bot.on('message', function(event)){
 		console.log('錯誤產生，錯誤碼：'+error);
 	});
 }
+
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
 	
