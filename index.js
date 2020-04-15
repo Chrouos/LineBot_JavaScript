@@ -122,7 +122,6 @@ function welcomes(){
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
 	
-	welcome();
    
 	if(event.message.text == '文化資工'){
 		var msg = '這就是文化資工';
@@ -153,6 +152,11 @@ bot.on('message', function(event) {
 		console.log('錯誤產生，錯誤碼：'+error);
 		});
 	}//校園地圖
+	
+	if(event.message.text == '呼叫'){
+		welcome();
+	}
+	
 	
 });
 
