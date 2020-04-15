@@ -110,7 +110,7 @@ function googleSheetsapi(){
 			appendMyRow(myId);	
 			return false;
 			}
-		}
+		//}
 	});
 }
 
