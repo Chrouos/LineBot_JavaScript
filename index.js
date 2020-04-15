@@ -118,16 +118,6 @@ function welcome_start(event){
 	});
 }	
 
-//謝語
-function thank_tail(event){
-	var tail = "我是尾巴" ;
-	event.reply(tail).then(function(data) {
-		console.log(tail);
-	}).catch(function(error) {
-		console.log('錯誤產生，錯誤碼：'+error);
-	});
-}
-
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
 	
@@ -158,7 +148,7 @@ bot.on('message', function(event) {
 		});
 	}//文化資工
 	
-	else if(event.message.text == '招生網頁'){
+	if(event.message.text == '招生網頁'){
 		var msg = '你呼叫招生網頁我聽到了！！\n由於我不太專業，只好請到了專業的學校網站出來(́◉◞౪◟◉‵) \n以下的內容有：課程大綱、師資陣容、系作介紹等等…\nhttps://iecs.pccu.edu.tw/files/11-1130-5770.php';
 		event.reply(msg).then(function(data) {
 		console.log(msg);
@@ -167,7 +157,7 @@ bot.on('message', function(event) {
 		});
 	}//招生網頁
 	
-	else if(event.message.text == '校園地圖'){
+	if(event.message.text == '校園地圖'){
 		var msg = '好心的機器人告訴大家，文化很小，也很好迷路～\n機器人友情提示：迷路的只有學長姐\n\n所以特地準備了地圖，歡迎大家點進看看校園\n\n\n所以特地準備了地圖，歡迎大家點進看看校園\n https://www.pccu.edu.tw/intro_traffic.html \n\n也準備了校園平面圖呢！\n https://www.pccu.edu.tw/intro_campus_map.html';
 		event.reply(msg).then(function(data) {
 		console.log(msg);
@@ -177,17 +167,18 @@ bot.on('message', function(event) {
 	}//校園地圖
 	
 	if(event.message.text == '機器人出來'){
-		/*
-		var welcome = "歡迎來到文化資工招生聊天機器人(開心) "+ "\n" + "這是下一行" ;
-			event.reply(welcome).then(function(data) {
-			console.log(welcome);
-		}).catch(function(error) {
-			console.log('錯誤產生，錯誤碼：'+error);
-		});
-		*/
 		welcome_start(event);
 	}
 	
+	if(event.message.text == '還想知道更多'){
+		var msg = '還真的是很多要求呢？\n是不是很想了解我們學校呀？ლ(◉◞౪◟◉ )ლ\n\n那麼竟然你大發慈悲的問了，我就貫徹… 好啦好啦\n可以輸入下面來呼叫我\n';
+		event.reply(msg).then(function(data) {
+		console.log(msg);
+		}).catch(function(error) {
+		console.log('錯誤產生，錯誤碼：'+error);
+		});
+	}//moremore
+
 	
 });
 
