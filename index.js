@@ -147,7 +147,7 @@ bot.on('message', function(event) {
 	
 	
 	if(event.message.text == '文化資工'){
-		var msg = '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n" + 'http://facemood.grtimed.com/index.php?view=member&mod=user&mid=5186' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工專人為你回答唷。';
+		var msg = '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n" + 'https://university.1111.com.tw/univ_depinfo5.aspx?sno=100123&mno=520114' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工專人為你回答唷。';
 	  //收到文字訊息時，直接把收到的訊息傳回去
 		event.reply(msg).then(function(data) {
 		  // 傳送訊息成功時，可在此寫程式碼 
@@ -159,7 +159,7 @@ bot.on('message', function(event) {
 	}//文化資工
 	
 	else if(event.message.text == '招生網頁'){
-		var msg = '這是招生網頁';
+		var msg = '這裡是文化資工的招生網頁\n內容有：課程大綱、師資陣容、系作介紹等等…\nhttps://iecs.pccu.edu.tw/files/11-1130-5770.php';
 		event.reply(msg).then(function(data) {
 		console.log(msg);
 		}).catch(function(error) {
@@ -168,7 +168,7 @@ bot.on('message', function(event) {
 	}//招生網頁
 	
 	else if(event.message.text == '校園地圖'){
-		var msg = '這是校園地圖';
+		var msg = '好心的機器人告訴大家，文化很小，也很好迷路～\n\n所以特地準備了地圖，歡迎大家點進看看校園\n https://www.pccu.edu.tw/intro_traffic.html \n\n也準備了校園平面圖呢！\n https://www.pccu.edu.tw/intro_campus_map.html';
 		event.reply(msg).then(function(data) {
 		console.log(msg);
 		}).catch(function(error) {
