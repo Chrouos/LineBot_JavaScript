@@ -117,7 +117,7 @@ function googleSheetsapi(event){
 }
 
 function welcomes(){
-	var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + "<br>" +  '這是下一行' ;
+	var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + \n +  '這是下一行' ;
 	event.reply(msg).then(function(data) {
 		console.log(msg);
 	}).catch(function(error) {
