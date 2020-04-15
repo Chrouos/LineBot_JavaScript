@@ -105,7 +105,7 @@ function googleSheetsapi(){
 			
 			console.log(myStep);
 						
-			//if(myStep == 2) return true;
+			if(myStep == 2) {return true;}
 			if (myStep>=totalSteps){
 			myStep=-1;
 			users[myId].step=myStep;
