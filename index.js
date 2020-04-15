@@ -110,7 +110,7 @@ function googleSheetsapi(event){
 
 //歡迎詞
 function welcome_start(event){
-	var welcome = "歡迎來到文化資工招生聊天機器人(開心) "+ "\n" + "這是下一行" ;
+	var welcome = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n 這裡有關許多你不懂的也有許多你懂的（？） \n 不過歡迎隨時呼叫我唷，不然我會長灰塵！ \n 啊我沒有實體 \n\n 可以這樣呼叫我：文化資工、招生網頁、校園地圖\n 並且有任何不懂的問題可以呼叫我「表單」\n 這樣以來在校的學長姐們就會替你們回答哦！ \n\n\n偷偷告訴你們，想我的時候或忘記的時候，喊「呼叫」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
 	event.reply(welcome).then(function(data) {
 		console.log(welcome);
 	}).catch(function(error) {
