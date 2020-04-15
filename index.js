@@ -103,7 +103,7 @@ function googleSheetsapi(){
 			myStep++;
 			users[myId].step=myStep;
 				console.log(myStep);
-				if(myStep == 2) return false;
+				//if(myStep == 2) return false;
 				if (myStep>=totalSteps){
 				myStep=-1;
 				users[myId].step=myStep;
@@ -118,7 +118,9 @@ function googleSheetsapi(){
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
 	if (event.message.text === '表單'){
+		for(int i=0; i<3; i++){
 		googleSheetsapi()
+		}
    }
    
    /*
