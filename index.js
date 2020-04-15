@@ -126,10 +126,15 @@ function welcome_start(event){
 
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
-	
+	var myId=event.source.userId;
+	if(users[myId].step >= 1){
+		googleSheetsapi(event)
+	}
 	if(event.message.text == '表單'){
 		googleSheetsapi(event)
 	}
+	
+
 	
 	if(event.message.text == '文化資工'){
 		var msg = '這就是文化資工';
