@@ -78,7 +78,8 @@ function appendMyRow(userId) {
       }
    });
 }
-//
+
+//表單回復Function
 function googleSheetsapi(event){
 		if (event.message.type === 'text') {
 			var myId=event.source.userId;
@@ -115,14 +116,13 @@ function googleSheetsapi(event){
 		}
 }
 
-
+function welcomes(){
+	var welcome = '歡迎來到文化資工招生聊天機器人(開心)' + "<br>" +  '這是下一行' ;
+}
 //LineBot收到user的文字訊息時的處理函式
 bot.on('message', function(event) {
-	/*
-	if (event.message.text === '表單'){
-		googleSheetsapi(event)
-   }
-   */
+	
+	welcome();
    
 	if(event.message.text == '文化資工'){
 		var msg = '這就是文化資工';
