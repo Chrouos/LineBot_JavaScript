@@ -110,7 +110,7 @@ function googleSheetsapi(event){
 
 //歡迎詞
 function welcome_start(event){
-	var welcome = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n這裡有關許多你不懂的也有許多你懂的（？） \n不過歡迎隨時呼叫我唷，不然我會長灰塵！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：「文化資工」「招生網頁」「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會替你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「呼叫」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
+	var welcome = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n這裡有關許多你不懂的也有許多你懂的（？） \n不過歡迎隨時呼叫我唷，不然我會長灰塵！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：「文化資工」「招生網頁」「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會替你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「機器人出來」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
 	event.reply(welcome).then(function(data) {
 		console.log(welcome);
 	}).catch(function(error) {
@@ -168,7 +168,7 @@ bot.on('message', function(event) {
 	}//招生網頁
 	
 	else if(event.message.text == '校園地圖'){
-		var msg = '好心的機器人告訴大家，文化很小，也很好迷路～\n\n所以特地準備了地圖，歡迎大家點進看看校園\n https://www.pccu.edu.tw/intro_traffic.html \n\n也準備了校園平面圖呢！\n https://www.pccu.edu.tw/intro_campus_map.html';
+		var msg = '好心的機器人告訴大家，文化很小，也很好迷路～\n機器人友情提示：迷路的只有學長姐\n\n所以特地準備了地圖，歡迎大家點進看看校園\n\n\n所以特地準備了地圖，歡迎大家點進看看校園\n https://www.pccu.edu.tw/intro_traffic.html \n\n也準備了校園平面圖呢！\n https://www.pccu.edu.tw/intro_campus_map.html';
 		event.reply(msg).then(function(data) {
 		console.log(msg);
 		}).catch(function(error) {
@@ -176,7 +176,7 @@ bot.on('message', function(event) {
 		});
 	}//校園地圖
 	
-	if(event.message.text == '呼叫'){
+	if(event.message.text == '機器人出來'){
 		/*
 		var welcome = "歡迎來到文化資工招生聊天機器人(開心) "+ "\n" + "這是下一行" ;
 			event.reply(welcome).then(function(data) {
