@@ -81,7 +81,7 @@ function appendMyRow(userId) {
 
 function googleSheetsapi(){
 	bot.on('message', function(event) {
-		//if (event.message.type === 'text') {
+		if (event.message.type === 'text') {
 		var myId=event.source.userId;
 		var msg = event.message.text;
 		if (users[myId]==undefined){
@@ -110,7 +110,7 @@ function googleSheetsapi(){
 			appendMyRow(myId);	
 			return false;
 			}
-		//}
+		}
 	});
 }
 
@@ -120,6 +120,8 @@ bot.on('message', function(event) {
 	if (event.message.text === '表單'){
 		googleSheetsapi()
    }
+   
+   /*
    else{
 		var msg = event.message.text;
 	  //收到文字訊息時，直接把收到的訊息傳回去
@@ -131,6 +133,8 @@ bot.on('message', function(event) {
 		  console.log('錯誤產生，錯誤碼：'+error);
 		});
    }
+   */
+   
 });
 
 
