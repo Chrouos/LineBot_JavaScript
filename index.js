@@ -120,6 +120,7 @@ function welcome_start(event){
 			title: '請選擇你想要我做什麼～',		
 			text: '點擊會嗎？',
 			actions: [
+				{ label: '想了解小工人', type: 'message', text: '想了解小工人' },
 				{ label: '文化資工', type: 'message', text: '文化資工' },
 				{ label: '招生網頁', type: 'message', text: '招生網頁'},
 				{ label: '校園地圖', type: 'message', text: '校園地圖'},
@@ -184,10 +185,10 @@ bot.on('message', function(event) {
 		});
 	}//校園地圖
 	
-	if(event.message.text == '想更了解小工人'){
+	if(event.message.text == '想了解小工人'){
 		var introduce = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n我叫「文化資訊小工人」，很好(難)聽吧～\n這裡有關許多你不懂的也有許多我不懂的(?) \n不過歡迎隨時呼叫我唷，不然我會長灰塵的！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：\n「文化資工」\n「招生網頁」\n「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會為你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「小工人」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
 		event.reply(introduce).then(function(data) {
-		console.log("自我介紹");
+		console.log("想了解小工人");
 		}).catch(function(error) {
 		console.log('錯誤產生，錯誤碼：'+error);
 		});
