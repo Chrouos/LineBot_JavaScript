@@ -108,7 +108,7 @@ function googleSheetsapi(event){
 		}
 }
 
-//歡迎詞
+//呼叫小工人
 function welcome_start(event){
 	var welcome ={
 		type: 'template',
@@ -120,7 +120,7 @@ function welcome_start(event){
 			title: '請選擇你想要我做什麼～',		
 			text: '點擊會嗎？',
 			actions: [
-			//	{ label: '想了解小工人', type: 'message', text: '想了解小工人' },
+			//	{ label: '想了解小工人', type: 'message', text: '想了解小工人' }, #最多四個
 				{ label: '文化資工', type: 'message', text: '文化資工' },
 				{ label: '招生網頁', type: 'message', text: '招生網頁'},
 				{ label: '校園地圖', type: 'message', text: '校園地圖'},
