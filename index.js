@@ -110,7 +110,8 @@ function googleSheetsapi(event){
 
 //歡迎詞
 function welcome_start(event){
-	var welcome ={
+	var welcome1 = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n我叫「文化資訊小工人」，很好(難)聽吧～\n這裡有關許多你不懂的也有許多我不懂的(?) \n不過歡迎隨時呼叫我唷，不然我會長灰塵的！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：\n「文化資工」\n「招生網頁」\n「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會為你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「小工人」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
+	var welcome2 ={
 		type: 'template',
 		altText: 'Buttons alt text',
 		//可放入圖片
@@ -127,7 +128,7 @@ function welcome_start(event){
 			],
 		},
 	}
-	event.reply(welcome).then(function(data) {
+	event.reply(welcome1 + welcome2).then(function(data) {
 		console.log('有人呼叫小工人出來了！');
 	}).catch(function(error) {
 		console.log('錯誤產生，錯誤碼：'+error);
