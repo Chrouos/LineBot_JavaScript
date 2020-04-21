@@ -113,21 +113,22 @@ function welcome_start(event){
 	var welcome ={
 		type: 'template',
 		altText: 'Buttons alt text',
+		//可放入圖片
+		//thumbnailImageUrl: 'https://github.com/line/line-bot-sdk-nodejs/raw/master/examples/kitchensink/static/buttons/1040.jpg',
 		template: {
 		type: 'buttons',
-		thumbnailImageUrl: 'https://github.com/line/line-bot-sdk-nodejs/raw/master/examples/kitchensink/static/buttons/1040.jpg',
-		title: 'My button sample',
+		title: '我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n我叫「文化資訊小工人」，很好(難)聽吧～\n這裡有關許多你不懂的也有許多我不懂的(?) \n不過歡迎隨時呼叫我唷，不然我會長灰塵的！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：\n「文化資工」\n「招生網頁」\n「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會為你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「小工人」就好了哦♡(*´∀｀*)人(*´∀｀*)♡';
 		text: 'Hello, my button',
 		actions: [
-			{ label: 'Go to line.me', type: 'uri', uri: 'https://line.me' },
-			{ label: 'Say hello1', type: 'postback', data: 'hello こんにちは' },
-			{ label: '言 hello2', type: 'postback', data: 'hello こんにちは', text: 'hello こんにちは' },
-			{ label: 'Say message', type: 'message', text: 'Rice=米' },
+			{ label: '文化資工', type: 'message', text: '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n\n" + 'https://university.1111.com.tw/univ_depinfo5.aspx?sno=100123&mno=520114' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工具專人為你回答唷。(在校的學長姐們)' },
+			{ label: '招生網頁', type: 'postback', data: 'hello こんにちは' },
+			{ label: '校園地圖', type: 'postback', data: 'hello こんにちは', text: 'hello こんにちは' },
+			{ label: '呼叫表單', type: 'message', text: '表單' },
 		],
 		},
 	}
 	event.reply(welcome).then(function(data) {
-		console.log(welcome);
+		console.log('有人呼叫小工人出來了！');
 	}).catch(function(error) {
 		console.log('錯誤產生，錯誤碼：'+error);
 	});
