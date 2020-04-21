@@ -110,7 +110,22 @@ function googleSheetsapi(event){
 
 //歡迎詞
 function welcome_start(event){
-	var welcome = "我是文化資工人所創造的招生聊天機器人ε٩(๑> ₃ <)۶з \n這裡有關許多你不懂的也有許多你懂的（？） \n不過歡迎隨時呼叫我唷，不然我會長灰塵！ \n啊不過我沒有實體… \n\n那麼！可以這樣呼叫我：「文化資工」「招生網頁」「校園地圖」\n並且有任何不懂的問題可以呼叫我「表單」\n這樣一來在校的學長姐們就會替你們回答哦！ \n\n偷偷告訴你們，想我的時候或忘記的時候，喊「工具人出來」就好了哦♡(*´∀｀*)人(*´∀｀*)♡" ;
+	var welcome ={
+		type: 'template',
+		altText: 'Buttons alt text',
+		template: {
+		type: 'buttons',
+		thumbnailImageUrl: 'https://github.com/line/line-bot-sdk-nodejs/raw/master/examples/kitchensink/static/buttons/1040.jpg',
+		title: 'My button sample',
+		text: 'Hello, my button',
+		actions: [
+			{ label: 'Go to line.me', type: 'uri', uri: 'https://line.me' },
+			{ label: 'Say hello1', type: 'postback', data: 'hello こんにちは' },
+			{ label: '言 hello2', type: 'postback', data: 'hello こんにちは', text: 'hello こんにちは' },
+			{ label: 'Say message', type: 'message', text: 'Rice=米' },
+		],
+		},
+	}
 	event.reply(welcome).then(function(data) {
 		console.log(welcome);
 	}).catch(function(error) {
@@ -122,6 +137,7 @@ function welcome_start(event){
 bot.on('message', function(event) {
 	
 	var myId=event.source.userId;
+	console.log("ID = " + myId + " 正在使用中");
 	if (users[myId]==undefined){
 		users[myId]=[];
 		users[myId].userId=myId;
@@ -136,12 +152,13 @@ bot.on('message', function(event) {
 	}
 	
 	
+	
 	if(event.message.text == '文化資工'){
-		var msg = '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n" + 'https://university.1111.com.tw/univ_depinfo5.aspx?sno=100123&mno=520114' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工具專人為你回答唷。';
+		var msg = '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n\n" + 'https://university.1111.com.tw/univ_depinfo5.aspx?sno=100123&mno=520114' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工具專人為你回答唷。(在校的學長姐們)';
 	  //收到文字訊息時，直接把收到的訊息傳回去
 		event.reply(msg).then(function(data) {
 		  // 傳送訊息成功時，可在此寫程式碼 
-		  console.log(msg);
+		  console.log("文化資工的呼叫");
 		}).catch(function(error) {
 		  // 傳送訊息失敗時，可在此寫程式碼 
 		  console.log('錯誤產生，錯誤碼：'+error);
@@ -149,27 +166,28 @@ bot.on('message', function(event) {
 	}//文化資工
 	
 	if(event.message.text == '招生網頁'){
-		var msg = '你呼叫招生網頁我聽到了！！\n由於我不太專業，只好請到了專業的學校網站出來(́◉◞౪◟◉‵) \n以下的內容有：課程大綱、師資陣容、系作介紹等等…\nhttps://iecs.pccu.edu.tw/files/11-1130-5770.php';
+		var msg = '你呼叫招生網頁我聽到了！！\n由於我不太專業，只好請到了專業的學校網站出來(́◉◞౪◟◉‵) \n以下的內容有：課程大綱、師資陣容、系作介紹等等…'+ '\n\n' + 'https://iecs.pccu.edu.tw/files/11-1130-5770.php';
 		event.reply(msg).then(function(data) {
-		console.log(msg);
+		console.log("招生網頁的呼叫");
 		}).catch(function(error) {
 		console.log('錯誤產生，錯誤碼：'+error);
 		});
 	}//招生網頁
 	
 	if(event.message.text == '校園地圖'){
-		var msg = '好心的機器人告訴大家，文化很小，也很好迷路～\n機器人友情提示：迷路的只有學長姐……\n\n所以特地準備了地圖，歡迎大家點進看看校園長什麼樣子～\n\n\n所以特地準備了地圖，歡迎大家點進看看校園\n https://www.pccu.edu.tw/intro_traffic.html \n\n也準備了校園平面圖呢！\n https://www.pccu.edu.tw/intro_campus_map.html';
+		var msg = '好心的機器人告訴大家，文化很小，也很好迷路～\n機器人友情提示：迷路的只有學長姐……\n\n所以特地準備了地圖，歡迎大家點進看看校園長什麼樣子～\n\n\n所以特地準備了地圖，歡迎大家點進看看校園\n\n https://www.pccu.edu.tw/intro_traffic.html \n\n也準備了校園平面圖呢！\n https://www.pccu.edu.tw/intro_campus_map.html';
 		event.reply(msg).then(function(data) {
-		console.log(msg);
+		console.log("校園地圖的呼叫");
 		}).catch(function(error) {
 		console.log('錯誤產生，錯誤碼：'+error);
 		});
 	}//校園地圖
 	
-	if(event.message.text == '工具人出來'){
+	if(event.message.text == '小工人'){
 		welcome_start(event);
 	}
 	
+	//小彩蛋
 	if(event.message.text == '還想知道更多'){
 		var msg = '還真的是很多要求呢？\n是不是很想了解我們學校呀？ლ(◉◞౪◟◉ )ლ\n\n那麼竟然你大發慈悲的問了，我就貫徹… 好啦好啦\n可以輸入下面來呼叫我\n';
 		event.reply(msg).then(function(data) {
@@ -181,7 +199,6 @@ bot.on('message', function(event) {
 
 	
 });
-
 
 
 //這是發送訊息給user的函式
