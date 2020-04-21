@@ -112,7 +112,7 @@ function googleSheetsapi(event){
 function welcome_start(event){
 	var welcome ={
 		type: 'template',
-		altText: 'Buttons alt text',
+		altText: '小工人在這裡跟你說抱歉，電腦板顯示不出來இдஇ',
 		//可放入圖片
 		//thumbnailImageUrl: 'https://github.com/line/line-bot-sdk-nodejs/raw/master/examples/kitchensink/static/buttons/1040.jpg',
 		template: {
