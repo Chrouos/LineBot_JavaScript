@@ -120,9 +120,9 @@ function welcome_start(event){
 			title: 'My button sample',		
 			text: '改',
 			actions: [
-				{ label: '文化資工', type: 'message', text: '哈囉～' + "\n" + '這裡包含關於文化資工的信息，請點下面這個唷 d(`･∀･)b' + "\n\n" + 'https://university.1111.com.tw/univ_depinfo5.aspx?sno=100123&mno=520114' + "" + '\n當然，如果你有問題歡迎使用「表單」系統，呼叫文化資工具專人為你回答唷。(在校的學長姐們)' },
-				{ label: '招生網頁', type: 'postback', data: 'hello こんにちは' },
-				{ label: '校園地圖', type: 'postback', data: 'hello こんにちは', text: 'hello こんにちは' },
+				{ label: '文化資工', type: 'message', text: '文化資工' },
+				{ label: '招生網頁', type: 'message', text: '招生網頁'},
+				{ label: '校園地圖', type: 'message', text: '校園地圖'},
 				{ label: '呼叫表單', type: 'message', text: '表單' },
 			],
 		},
